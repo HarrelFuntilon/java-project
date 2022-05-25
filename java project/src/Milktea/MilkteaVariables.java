@@ -10,6 +10,7 @@ public class MilkteaVariables {
     void getWallet(int wallet) {
         this.wallet = wallet;
         System.out.println("Over all balance: " + wallet);
+
     }
 
     void getChoice(int choice) {
