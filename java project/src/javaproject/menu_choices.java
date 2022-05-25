@@ -1,7 +1,9 @@
 package javaproject;
 
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import Milktea.MilkTeaMenu;
 
 public class menu_choices {
 
@@ -26,7 +28,9 @@ public class menu_choices {
 
 			{
 			case 1: 
-				new MilkTea();
+                            
+				 new MilkTeaMenu();
+                                
 				break;
 				
 				
