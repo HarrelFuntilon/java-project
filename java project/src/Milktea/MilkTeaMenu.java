@@ -1,5 +1,6 @@
 package Milktea;
 
+import javaproject.menu_choices;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -11,16 +12,14 @@ public class MilkTeaMenu {
 
     int qty, num;
 
-    public static int wallet;
+    public int wallet;
 
     MilkteaVariables mc = new MilkteaVariables();
 
 
     JFrame Optiopane;
 
-   public MilkTeaMenu() {
-       
-      
+    public MilkTeaMenu() {
 
         do {
 
@@ -28,7 +27,7 @@ public class MilkTeaMenu {
                     + "					 \n[1] Winter Melon"
                     + "					 \n[2] Oreo Cheesecake"
                     + "					 \n[3] Salted Caramel"
-                    + "\n[4] Check Balance:"
+                    + "\n[4] Return to the Main Menu"
                     + "					\nChoose [1-3]:"));
 
             switch (choice) {
@@ -46,7 +45,7 @@ public class MilkTeaMenu {
                 }
 
                 case 4 -> {
-                    mc.balance();
+                    new menu_choices();
                 }
 
             }
@@ -92,8 +91,9 @@ public class MilkTeaMenu {
             passValue();
             order1();
         } else if (prdChoice == 4) {
-             
+             System.out.println("\nPassed Wallet number in choice 4: " + wallet);
             new MilkTeaMenu();
+           
         }
 
     }
@@ -136,7 +136,7 @@ public class MilkTeaMenu {
             order2();
         } else if (prdChoice == 4) {
 
-             new MilkTeaMenu();
+            new MilkTeaMenu();
         }
 
     }
@@ -179,21 +179,28 @@ public class MilkTeaMenu {
             order3();
         } else if (prdChoice == 4) {
 
-             new MilkTeaMenu();
+            new MilkTeaMenu();
         }
 
     }
-    
+
     void passValue() {
 
-        num = num + wallet;
-
-        System.out.println("\nPassed Num: " + num);
+        System.out.println("\nPassed Wallet number: " + wallet);
         System.out.println("\nPassed choice: " + choice);
 
-        mc.getWallet(num);
+        mc.getWallet(wallet);
         mc.getChoice(choice);
 
     }
+    
+   
 
+    
+    
+    
+    public static void main (String args[]){
+    
+        new MilkTeaMenu();
+    }
 }
