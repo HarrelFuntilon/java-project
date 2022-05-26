@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class MilkteaVariables {
 
-    int wallet;
+    private static int wallet;
     int choice;
 
     void getWallet(int wallet) {
@@ -16,9 +16,11 @@ public class MilkteaVariables {
         this.choice = choice;
     }
 
-    void balance() {
+    public static void balance(int wallet) {
 
-        JOptionPane.showMessageDialog(null, "Your Current Balance is: " + wallet);
+        JOptionPane.showMessageDialog(null, "Your Current Balance is: " + MilkteaVariables.wallet);
+       
+        
     }
 
 }

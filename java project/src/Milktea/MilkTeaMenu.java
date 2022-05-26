@@ -11,9 +11,11 @@ public class MilkTeaMenu {
 
     int qty, num;
 
-    public static int wallet;
+    public int wallet;
 
     MilkteaVariables mc = new MilkteaVariables();
+
+    
 
 
     JFrame Optiopane;
@@ -46,7 +48,7 @@ public class MilkTeaMenu {
                 }
 
                 case 4 -> {
-                    mc.balance();
+                    MilkteaVariables.balance(wallet);
                 }
 
             }
@@ -93,7 +95,9 @@ public class MilkTeaMenu {
             order1();
         } else if (prdChoice == 4) {
              
+             System.out.println("\nPassed Wallet number in choice 4: " + wallet);
             new MilkTeaMenu();
+           
         }
 
     }
@@ -186,14 +190,21 @@ public class MilkTeaMenu {
     
     void passValue() {
 
-        num = num + wallet;
-
-        System.out.println("\nPassed Num: " + num);
+        System.out.println("\nPassed Wallet number: " + wallet);
         System.out.println("\nPassed choice: " + choice);
 
-        mc.getWallet(num);
+        mc.getWallet(wallet);
         mc.getChoice(choice);
 
     }
+    
+   
 
+    
+    
+    
+    public static void main (String args[]){
+    
+        new MilkTeaMenu();
+    }
 }
