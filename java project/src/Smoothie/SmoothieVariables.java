@@ -1,12 +1,13 @@
 package Smoothie;
 
+import Milktea.MilkteaVariables;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javaproject.menu_choices;
 
 public class SmoothieVariables {
 
-    double wallet;
+    private static int wallet;
     int choice;
     double payment;
     int total;
@@ -14,16 +15,18 @@ public class SmoothieVariables {
 
     void getWallet(int wallet) {
         this.wallet = wallet;
-        System.out.println("Over all balance: " + wallet);
+        System.out.println("Total Smoothie Cost: " + wallet);
     }
 
     void getChoice(int choice) {
         this.choice = choice;
     }
 
-    public void balance() {
+    public static int balance(int wallet) {
 
-        JOptionPane.showMessageDialog(null, "Your Current Balance is: " + wallet);
+        System.out.println("Smoothie Variables: " + SmoothieVariables.wallet);
+       
+        return SmoothieVariables.wallet;
     }
 
     public void payment() {

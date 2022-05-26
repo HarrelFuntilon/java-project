@@ -1,5 +1,6 @@
 package Milktea;
 
+import javaproject.menu_choices;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -26,7 +27,7 @@ public class MilkTeaMenu {
                     + "					 \n[1] Winter Melon"
                     + "					 \n[2] Oreo Cheesecake"
                     + "					 \n[3] Salted Caramel"
-                    + "\n[4] Check Balance:"
+                    + "\n[4] Return to the Main Menu"
                     + "					\nChoose [1-3]:"));
 
             switch (choice) {
@@ -44,7 +45,7 @@ public class MilkTeaMenu {
                 }
 
                 case 4 -> {
-                    MilkteaVariables.balance(wallet);
+                    new menu_choices();
                 }
 
             }

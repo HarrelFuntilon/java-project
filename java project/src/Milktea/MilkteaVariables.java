@@ -9,18 +9,18 @@ public class MilkteaVariables {
 
     void getWallet(int wallet) {
         this.wallet = wallet;
-        System.out.println("Over all balance: " + wallet);
-
+        System.out.println("Total Milktea Cost: " + wallet);
     }
 
     void getChoice(int choice) {
         this.choice = choice;
     }
 
-    public static void balance(int wallet) {
+    public static int balance(int wallet) {
 
-        JOptionPane.showMessageDialog(null, "Your Current Balance is: " + MilkteaVariables.wallet);
+        System.out.println("MilkTea Variables: " + MilkteaVariables.wallet);
        
+        return MilkteaVariables.wallet;
         
     }
 
