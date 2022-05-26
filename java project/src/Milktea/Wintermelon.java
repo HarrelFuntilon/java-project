@@ -4,7 +4,6 @@
  */
 package Milktea;
 
-import static Milktea.MilkTeaMenu.wallet;
 import javax.swing.JOptionPane;
 
 public class Wintermelon {
