@@ -1,5 +1,6 @@
 package Milktea;
 
+import static Smoothie.SmoothieMenu.wallet;
 import javaproject.menu_choices;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -91,7 +92,7 @@ public class MilkTeaMenu {
             passValue();
             order1();
         } else if (prdChoice == 4) {
-             System.out.println("\nPassed Wallet number in choice 4: " + wallet);
+            
             new MilkTeaMenu();
            
         }
@@ -185,11 +186,11 @@ public class MilkTeaMenu {
     }
 
     void passValue() {
-
-        System.out.println("\nPassed Wallet number: " + wallet);
+          num = num + wallet;
+        System.out.println("\nPassed Wallet number: " + num);
         System.out.println("\nPassed choice: " + choice);
 
-        mc.getWallet(wallet);
+        mc.getWallet(num);
         mc.getChoice(choice);
 
     }
